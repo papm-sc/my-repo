@@ -11,7 +11,7 @@ namespace WebApplicationTestGit.Controllers
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy"
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "toto"
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
@@ -25,7 +25,7 @@ namespace WebApplicationTestGit.Controllers
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
-            return Enumerable.Range(1, 8).Select(index => new WeatherForecast
+            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = rng.Next(-20, 55),
